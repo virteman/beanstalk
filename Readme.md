@@ -4,7 +4,7 @@ Go client for [beanstalkd](http://kr.github.com/beanstalkd/).
 
 ## Install
 
-    $ go get github.com/kr/beanstalk
+    $ go get github.com/edwardhey/beanstalk
 
 ## Use
 
