@@ -15,8 +15,8 @@ type Tube struct {
 // the id of the newly-created job. If delay is nonzero, the server will
 // wait the given amount of time after returning to the client and before
 // putting the job into the ready queue.
-func (t *Tube) Put(_id uint64, body []byte, pri uint32, delay, ttr time.Duration) (id uint64, err error) {
-	r, err := t.Conn.cmd(t, nil, body, "put", pri, dur(delay), dur(ttr), _id)
+func (t *Tube) Put(body []byte, pri uint32, delay, ttr time.Duration) (id uint64, err error) {
+	r, err := t.Conn.cmd(t, nil, body, "put", pri, dur(delay), dur(ttr))
 	if err != nil {
 		return 0, err
 	}
