@@ -161,6 +161,16 @@ func (c *Conn) Delete(id uint64) error {
 	return err
 }
 
+// Kickjob kick the given job.
+func (c *Conn) KickJob(id uint64) error {
+	r, err := c.cmd(nil, nil, nil, "kick-job", id)
+	if err != nil {
+		return err
+	}
+	_, err = c.readResp(r, false, "KICKED")
+	return err
+}
+
 // Release tells the server to perform the following actions:
 // set the priority of the given job to pri, remove it from the list of
 // jobs reserved by c, wait delay seconds, then place the job in the
