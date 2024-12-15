@@ -2,7 +2,7 @@ package beanstalk_test
 
 import (
 	"fmt"
-	"github.com/edwardhey/beanstalk"
+	"github.com/virteman/beanstalk"
 	"time"
 )
 

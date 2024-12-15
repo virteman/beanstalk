@@ -17,7 +17,7 @@ Please use `github.com/beanstalkd/beanstalk` in new code.
 
 ## Install
 
-    $ go get github.com/edwardhey/beanstalk
+    $ go get github.com/virteman/beanstalk
 
 ## Use
 
